@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:roundiv="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/tv_mch_ptb"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="16dp"
+            android:textColor="@color/mch_yanse"
+            android:text="￥20.00"
+            />
+        <TextView
+            android:id="@+id/tv_mch_jf"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="16dp"
+            android:textColor="#666666"
+            android:text="1000"
+            />
+        <TextView
+            android:id="@+id/tv_mch_time"
+            android:layout_width="0dp"
+            android:layout_weight="1.8"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="14dp"
+            android:textColor="#999999"
+            android:text="2018.9.29 10:30:21"
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F2F2F2"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        />
+</LinearLayout>

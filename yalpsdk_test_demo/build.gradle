@@ -1,0 +1,71 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 32
+
+    defaultConfig {
+        applicationId "com.cointizen.sdkdemo"
+        minSdkVersion 24
+        //noinspection ExpiredTargetSdkVersion
+        targetSdkVersion 32
+        versionCode 998
+        versionName "9.9.8"
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+    signingConfigs {
+
+        controlconfig {
+            keyAlias 'yalp'
+            keyPassword 'yalp123'
+            storeFile file('/Users/jwang/prod.yalp.games/yalp-sdk/yalp_new.jks')
+            storePassword 'yalp123'
+            v1SigningEnabled false
+            v2SigningEnabled true
+        }
+    }
+    buildTypes {
+        release {
+            signingConfig signingConfigs.controlconfig
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            android.applicationVariants.all { variant ->
+                variant.outputs.all {
+                    outputFileName = "yalpsdk_${variant.versionName}_${new Date().format("yyMMddHHmm")}.apk"
+                }
+            }
+        }
+        debug {
+            signingConfig signingConfigs.controlconfig
+            minifyEnabled false
+        }
+    }
+    useLibrary 'org.apache.http.legacy'
+}
+
+dependencies {
+    api project(':yalpsdk')
+    implementation 'androidx.core:core:1.8.0'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+//    Agora SDK
+
+
+
+// Volley
+
+    implementation 'com.android.volley:volley:1.2.1'
+    implementation 'com.google.code.gson:gson:2.9.0'
+    implementation 'junit:junit:4.12'
+
+
+}

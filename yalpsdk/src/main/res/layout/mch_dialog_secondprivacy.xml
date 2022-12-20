@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    android:gravity="center"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="260dp"
+        android:background="@drawable/mch_allowprivacy_dialog_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:text="@string/privacy_confirmation"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:paddingRight="30dp"
+            android:paddingLeft="30dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingRight="20dp"
+            android:paddingLeft="30dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="20dp">
+
+            <TextView
+                android:id="@+id/tv_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:ellipsize="end"
+                android:lineSpacingExtra="5dp"
+                android:text=""
+                android:textColor="#434344"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:paddingRight="30dp"
+            android:paddingLeft="30dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp">
+
+            <Button
+                android:id="@+id/btn_privacy_agree"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:text="@string/agree_and_continue"
+                android:textColor="#FEFEFE"
+                android:textSize="15sp"
+                android:background="@drawable/mch_allowprivacy_btn_agree"/>
+
+            <TextView
+                android:id="@+id/btn_privacy_reject"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/exit"
+                android:textColor="#21B1EB"
+                android:textSize="13sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

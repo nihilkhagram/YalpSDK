@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="45dp"
+    android:background="#00000000"
+    android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl_floating"
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp">
+
+            <com.cointizen.paysdk.view.round.CircleImageView
+                android:id="@+id/txt_mch_channel_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/mch_float_ico" />
+
+            <ImageView
+                android:id="@+id/layout_ycbg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:background="@drawable/mch_floating_delay_bg"
+                android:visibility="gone"
+                android:alpha="0.3"
+                />
+            <RelativeLayout
+                android:id="@+id/layout_yc"
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_delay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="--/--"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="13dp"
+                    android:textColor="#ffffff"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ms"
+                    android:textSize="8dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#ffffff"
+                    />
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/tv_weidu"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginRight="2dp"
+                android:visibility="gone"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/mch_icon_weidu"
+                />
+        </RelativeLayout>
+
+
+</FrameLayout>

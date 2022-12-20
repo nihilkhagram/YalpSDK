@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#ffffff"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+            <RelativeLayout
+                android:id="@+id/iv_mch_header_back"
+                android:layout_width="45dp"
+                android:layout_height="match_parent">
+aaa
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/mch_btn_back"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/tv_mch_header_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/link_account"
+                android:textSize="18dp"
+                android:textColor="#222222"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#DEE3E4" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal"
+        android:layout_margin="20dp"
+        android:background="@drawable/mch_et_bg">
+        <TextView
+            android:layout_width="85dp"
+            android:layout_height="match_parent"
+            android:text="@string/account"
+            android:textSize="14sp"
+            android:textColor="#333333"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"/>
+        <EditText
+            android:id="@+id/mch_et_account"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="@string/_6_15_letters_numbers"
+            android:maxLength="15"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="#333333"
+            android:textColorHint="#C1C1C4"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/mch_et_bg">
+        <TextView
+            android:layout_width="85dp"
+            android:layout_height="match_parent"
+            android:text="@string/password"
+            android:textSize="14sp"
+            android:textColor="#333333"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"/>
+        <EditText
+            android:id="@+id/mch_et_password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPassword"
+            android:background="@null"
+            android:hint="@string/_6_15_letters_numbers"
+            android:maxLength="15"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="#333333"
+            android:textColorHint="#C1C1C4"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/mch_et_bg">
+        <TextView
+            android:layout_width="85dp"
+            android:layout_height="match_parent"
+            android:text="@string/confirm_password"
+            android:textSize="14sp"
+            android:textColor="#333333"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"/>
+        <EditText
+            android:id="@+id/mch_et_password_again"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPassword"
+            android:background="@null"
+            android:hint="@string/re_enter_password"
+            android:maxLength="15"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="#333333"
+            android:textColorHint="#C1C1C4"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/mch_btn_ok"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:background="@drawable/mch_cricle_5dp_bg_blue"
+        android:text="@string/ok"
+        android:textColor="#ffffff"
+        android:textSize="15sp" />
+
+</LinearLayout>

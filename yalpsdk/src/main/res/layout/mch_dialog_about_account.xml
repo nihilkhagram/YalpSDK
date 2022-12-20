@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/mch_choosepay_backgrount"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="@string/about_alt_account"
+        android:textColor="#333333"
+        android:textSize="18sp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
+        <TextView
+            android:id="@+id/tv_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/alt_account_desc"
+            android:textSize="14sp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:lineSpacingMultiplier="1.3"
+            android:textColor="#666666" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#e3e3e3"/>
+
+    <TextView
+        android:id="@+id/btn_tv_mch_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/got_it"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="#666666"/>
+
+
+
+
+</LinearLayout>

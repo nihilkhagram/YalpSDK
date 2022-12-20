@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+        <RelativeLayout
+            android:id="@+id/btn_mch_back"
+            android:layout_width="45dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="20dp"
+                android:background="@drawable/mch_common_icon_back"
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_yue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/account_balance"
+            android:textColor="#222222"
+            android:textSize="19dp" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#DEE3E4"
+        />
+    <ListView
+        android:id="@+id/list_helper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        />
+</LinearLayout>

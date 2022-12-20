@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cashable_golds"
+        android:textSize="15dp"
+        android:textColor="#999999"
+        android:layout_marginTop="49dp"
+        android:layout_gravity="center_horizontal"
+        />
+    <TextView
+        android:id="@+id/tv_mch_jb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.00"
+        android:textSize="18dp"
+        android:textColor="@color/mch_yanse"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="42dp"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <TextView
+        android:id="@+id/btn_mch_tixian"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/mch_btn_lan_bg"
+        android:text="@string/go_to_wapsite_to_cashout"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:textSize="14dp"
+        />
+</LinearLayout>

@@ -1,0 +1,850 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:focusableInTouchMode="true"
+    android:id="@+id/layout_root"
+    android:background="#ffffff">
+
+    <com.cointizen.paysdk.view.MyScrollView
+        android:id="@+id/User_ScrollView"
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/layout_ooo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="165dp"
+                android:background="@drawable/mch_common_nav_bg_1">
+
+                <ImageView
+                    android:id="@+id/img_renzheng"
+                    android:layout_width="55dp"
+                    android:layout_height="18dp"
+                    android:layout_marginTop="12dp" />
+
+                <LinearLayout
+                    android:id="@+id/layout_guide1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/btn_mch_signin"
+                        android:layout_width="37dp"
+                        android:layout_height="30dp">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/mch_nav_icon_signin" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btn_mch_kefu"
+                        android:layout_width="37dp"
+                        android:layout_height="30dp">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/mch_nav_icon_kefu" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="46dp">
+
+                    <LinearLayout
+                        android:id="@+id/layout_mch_editname"
+                        android:layout_width="210dp"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <EditText
+                            android:id="@+id/et_mch_name"
+                            android:layout_width="152dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/mch_my_et_bg"
+                            android:gravity="center_vertical"
+                            android:maxLength="24"
+                            android:paddingLeft="8dp"
+                            android:singleLine="true"
+                            android:textColor="#222222"
+                            android:textColorHint="#999999"
+                            android:textCursorDrawable="@drawable/mch_my_etcursor"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:id="@+id/btn_mch_chage_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/mch_my_chage_bg"
+                            android:gravity="center"
+                            android:text="@string/modify"
+                            android:textColor="#ffffff"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_mch_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_mch_my_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:maxLength="30"
+                            android:text=""
+                            android:textColor="#ffffff"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:id="@+id/btn_mch_name_edit"
+                            android:layout_width="25dp"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="9dp"
+                                android:layout_height="10dp"
+                                android:layout_centerInParent="true"
+                                android:background="@drawable/mch_nav_icon_bianjia" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_mch_my_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="77dp"
+                    android:text="@string/username"
+                    android:textColor="#ffffff"
+                    android:textSize="12dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_mch_my_account"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_my_ptb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="6dp"
+                        android:background="@drawable/mch_my_jine_bg"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="2dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="2dp"
+                        android:text="@string/platform_coins_0"
+                        android:textColor="#ffffff"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/tv_my_jifen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="6dp"
+                        android:background="@drawable/mch_my_jine_bg"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="2dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="2dp"
+                        android:text="@string/points_0"
+                        android:textColor="#ffffff"
+                        android:textSize="12dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_my_jinbi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/mch_my_jine_bg"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="2dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="2dp"
+                        android:text="@string/gold_0"
+                        android:textColor="#ffffff"
+                        android:textSize="12dp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="78dp"
+                    android:layout_height="78dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="44dp"
+                    android:layout_marginRight="25dp">
+
+                    <com.cointizen.paysdk.view.round.NiceImageView
+                        android:id="@+id/img_mch_my_hread"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_centerInParent="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/mch_nav_pic_touxiang" />
+
+                    <RelativeLayout
+                        android:id="@+id/btn_mch_my_live"
+                        android:layout_width="30dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true">
+
+                        <ImageView
+                            android:id="@+id/img_mch_my_live"
+                            android:layout_width="25dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="3dp"
+                            android:background="@drawable/mch_icon_vip_n" />
+
+                        <TextView
+                            android:id="@+id/tv_mch_vip_live"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="3dp"
+                            android:gravity="center"
+                            android:text="V0"
+                            android:textColor="#ffffff"
+                            android:textSize="10sp"
+                            android:textStyle="italic|bold" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_btn"
+                android:layout_width="match_parent"
+                android:layout_marginTop="132dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:background="@drawable/mch_layout_btn_bg"
+                android:layout_height="85dp">
+
+                <LinearLayout
+                    android:id="@+id/layout_btn1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="9dp"
+                    android:layout_marginRight="9dp"
+                    android:layout_marginBottom="7dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="21dp"
+                    android:paddingRight="21dp">
+
+                    <LinearLayout
+                        android:id="@+id/btn_mch_banlance"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="3dp"
+                            android:background="@drawable/usd_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="6dp"
+                            android:text="@string/balance"
+                            android:textColor="#999999"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_mch_shequ"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="3dp"
+                            android:background="@drawable/mch_common_icon_shequ" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="6dp"
+                            android:text="@string/community"
+                            android:textColor="#999999"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_mch_open_reward"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="3dp"
+                            android:background="@drawable/mch_tab_icon_zhekou" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="6dp"
+                            android:text="@string/red_pack"
+                            android:textColor="#999999"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_mch_discount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="3dp"
+                            android:background="@drawable/mch_common_icon_zhekou" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="6dp"
+                            android:text="@string/discount"
+                            android:textColor="#999999"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_mch_xiaohao"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="3dp"
+                            android:background="@drawable/mch_common_icon_xiaohao" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="6dp"
+                            android:text="@string/alt_accounts"
+                            android:textColor="#999999"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/layout_btn"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/auto_login"
+                            android:textColor="#222222"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:text="@string/login_options"
+                            android:textColor="#9A9A9A"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/btn_mch_my_autologin"
+                        android:layout_width="53dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="14dp"
+                        android:background="@drawable/mch_common_btn_2" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F1F1F1" />
+
+                <RelativeLayout
+                    android:id="@+id/btn_mch_hindBall"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <TextView
+                        android:id="@+id/tv_yincang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="7dp"
+                        android:padding="8dp"
+                        android:text="@string/hide_button"
+                        android:textColor="#222222"
+                        android:textSize="14dp" />
+
+                    <ImageView
+                        android:layout_width="7dp"
+                        android:layout_height="12dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/mch_common_btn_xiala" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_mch_chagePass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#F1F1F1" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="15dp"
+                            android:text="@string/change_password"
+                            android:textColor="#222222"
+                            android:textSize="14dp" />
+
+                        <ImageView
+                            android:layout_width="7dp"
+                            android:layout_height="12dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/mch_common_btn_xiala" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_mch_bind_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#F1F1F1" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="7dp"
+                            android:padding="8dp"
+                            android:text="@string/link_account"
+                            android:textColor="#222222"
+                            android:textSize="14dp" />
+
+                        <ImageView
+                            android:id="@+id/img_icon_bind_account"
+                            android:layout_width="7dp"
+                            android:layout_height="12dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/mch_common_btn_xiala" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="6dp"
+                            android:layout_toLeftOf="@id/img_icon_bind_account"
+                            android:text="@string/go_to_link"
+                            android:textColor="#999999"
+                            android:textSize="13dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F1F1F1" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F1F1F1" />
+
+                <RelativeLayout
+                    android:id="@+id/btn_mch_Bind_mail"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <TextView
+                        android:id="@+id/tv_youxiang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="7dp"
+                        android:padding="8dp"
+                        android:text="@string/link_email_address"
+                        android:textColor="#222222"
+                        android:textSize="14dp" />
+
+                    <ImageView
+                        android:id="@+id/img_mch_2"
+                        android:layout_width="7dp"
+                        android:layout_height="12dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/mch_common_btn_xiala" />
+
+                    <TextView
+                        android:id="@+id/tv_bindEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="6dp"
+                        android:layout_toLeftOf="@id/img_mch_2"
+                        android:text="@string/go_to_link"
+                        android:textColor="#999999"
+                        android:textSize="13dp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F1F1F1" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F1F1F1" />
+
+                <RelativeLayout
+                    android:id="@+id/btn_mch_version"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="15dp"
+                        android:text="@string/current_version"
+                        android:textColor="#222222"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/tv_mc_version"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:text="@string/v2_0_0"
+                        android:textColor="#999999"
+                        android:textSize="13dp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F1F1F1" />
+
+                <RelativeLayout
+                    android:id="@+id/mch_layout_luping"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="15dp"
+                        android:text="@string/screen_recording"
+                        android:textColor="#222222"
+                        android:textSize="14dp" />
+
+                    <ImageView
+                        android:id="@+id/btn_mch_luping"
+                        android:layout_width="52dp"
+                        android:layout_height="33dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="14dp"
+                        android:background="@drawable/mch_common_btn_2" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F1F1F1" />
+
+                <RelativeLayout
+                    android:id="@+id/btn_mch_account_del"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <TextView
+                        android:id="@+id/txt_mch_account_del"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="15dp"
+                        android:text="@string/close_my_account"
+                        android:textColor="#222222"
+                        android:textSize="14dp" />
+
+                    <ImageView
+                        android:id="@+id/img_mch_account_del"
+                        android:layout_width="7dp"
+                        android:layout_height="12dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/mch_common_btn_xiala" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F1F1F1" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_joinStream"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txt_mch_account_del1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="Watch Live Stream"
+                        android:layout_marginTop="5dp"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#222222"
+                        android:textSize="18dp" />
+
+                   <!-- <TextView
+                        android:id="@+id/txt_mch_account_del1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="15dp"
+                        android:text="Join Stream"
+                        android:textColor="#222222"
+                        android:textSize="14dp" />
+
+                    <ImageView
+                        android:id="@+id/img_mch_account_del1"
+                        android:layout_width="7dp"
+                        android:layout_height="12dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/mch_common_btn_xiala" />-->
+
+                   <!-- <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_view_channels"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:listitem="@layout/row_layout_channels"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>-->
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_view_channels"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_below="@+id/txt_mch_account_del1"
+                        />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="7dp"
+                    android:background="#F1F1F1" />
+
+                <LinearLayout
+                    android:id="@+id/layout_guess"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginBottom="9dp"
+                        android:text="@string/guess_you_like"
+                        android:textColor="#666666"
+                        android:textSize="14dp" />
+
+                    <HorizontalScrollView
+                        android:id="@+id/id_recyclerview_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp"
+                        android:overScrollMode="never"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:id="@+id/gameInfo_ImagesLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="horizontal" />
+                    </HorizontalScrollView>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/btn_mch_back_game"
+                    android:layout_width="118dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="17dp"
+                    android:layout_marginBottom="50dp"
+                    android:background="@drawable/mch_my_backbtn_bg"
+                    android:gravity="center"
+                    android:text="@string/back_to_game"
+                    android:textColor="#222222"
+                    android:textSize="13dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center">
+
+
+                    <TextView
+                        android:id="@+id/txt_btn_agreement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:text="@string/user_agreement"
+                        android:textColor="@color/mch_yanse"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/and"
+                        android:textColor="#333333"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/txt_btn_protocal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:text="@string/privacy_policy"
+                        android:textColor="@color/mch_yanse"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </com.cointizen.paysdk.view.MyScrollView>
+</RelativeLayout>

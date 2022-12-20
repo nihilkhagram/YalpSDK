@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/mch_ng_bangzhu"
+        android:layout_height="203dp">
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:src="@drawable/mch_bangzhu_icon"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="40dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="35dp"
+            android:layout_height="34dp">
+
+            <RelativeLayout
+                android:id="@+id/mch_btn_helper_back"
+                android:layout_width="38dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/mch_icon_back"
+                    />
+            </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/help_center"
+                android:textColor="#ffffff"
+                android:textSize="19dp"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/mch_tv_helper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:text="@string/hi_how_may_i_help_you"
+            android:textSize="13dp"
+            android:textColor="#ffffff"
+            android:lineSpacingExtra="3dp"
+            android:layout_marginLeft="15dp"
+            />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:layout_marginTop="158dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <ListView
+                android:id="@+id/lv_mch_helper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:overScrollMode="never"
+                android:divider="@null" />
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="9dp"
+                android:layout_marginRight="9dp"
+                android:layout_marginBottom="40dp"
+                android:orientation="vertical"
+                android:background="@drawable/mch_helper_bg"
+                android:layout_height="137dp">
+
+                <RelativeLayout
+                    android:layout_marginTop="11dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/img_mch_one"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginRight="7dp"
+                        android:background="@drawable/mch_icon_zaixian_n" />
+
+                    <TextView
+                        android:id="@+id/mch_tv_helper_kefu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="90dp"
+                        android:layout_toRightOf="@id/img_mch_one"
+                        android:singleLine="true"
+                        android:text="@string/online_support"
+                        android:textColor="#222222"
+                        android:textSize="13dp" />
+
+                    <TextView
+                        android:id="@+id/mch_btn_helper_kefu"
+                        android:layout_width="60dp"
+                        android:layout_height="22dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="14dp"
+                        android:background="@drawable/mch_helper_btn_bg"
+                        android:gravity="center"
+                        android:text="@string/copy"
+                        android:textColor="#222222"
+                        android:textSize="11dp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_marginTop="9dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/img_mch_four"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginRight="7dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/mch_icon_email"
+                        />
+
+                    <TextView
+                        android:id="@+id/mch_tv_helper_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="90dp"
+                        android:layout_toRightOf="@id/img_mch_four"
+                        android:singleLine="true"
+                        android:text="@string/customer_service_email"
+                        android:textColor="#222222"
+                        android:textSize="13dp" />
+
+                    <TextView
+                        android:id="@+id/mch_btn_helper_email"
+                        android:layout_width="60dp"
+                        android:layout_height="22dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="14dp"
+                        android:background="@drawable/mch_helper_btn_bg"
+                        android:gravity="center"
+                        android:text="@string/copy"
+                        android:textColor="#222222"
+                        android:textSize="11dp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

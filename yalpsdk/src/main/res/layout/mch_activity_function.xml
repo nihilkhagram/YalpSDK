@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/layout_yindao"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/img_mc_2"
+            android:layout_width="148dp"
+            android:layout_height="31dp"
+            android:background="@drawable/mch_txt_1"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="49dp"
+            android:layout_marginBottom="150dp"
+            />
+        <ImageView
+            android:id="@+id/img_mc_1"
+            android:layout_width="113dp"
+            android:layout_height="55dp"
+            android:src="@drawable/mch_btn_next"
+            android:layout_centerInParent="true"
+            />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/mch_funtion_layout"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="167dp">
+            <RelativeLayout
+                android:id="@+id/lay_con"
+                android:layout_width="match_parent"
+                android:background="@drawable/mch_tab_bg_shu"
+                android:layout_alignParentBottom="true"
+                android:layout_height="140dp">
+
+                <GridView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="28dp"
+                    android:overScrollMode="never"
+                    android:scrollbars="none"
+                    />
+            </RelativeLayout>
+            <com.cointizen.paysdk.view.round.NiceImageView
+                android:id="@+id/mch_funtion_hread_img"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_marginLeft="18dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/mch_nav_pic_touxiang"
+                />
+            <TextView
+                android:id="@+id/mch_funtion_tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/account"
+                android:layout_marginLeft="5dp"
+                android:singleLine="true"
+                android:textSize="13dp"
+                android:textColor="#ffffff"
+                android:layout_toRightOf="@id/mch_funtion_hread_img"
+                android:layout_marginTop="30dp"
+                />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_mch_function_null"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/mch_funtion_layout"
+        />
+</RelativeLayout>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ExpandTextView">
+        <attr name="showLines" format="integer"/>
+    </declare-styleable>
+
+    <attr name="mch_srlDrawableSize" format="dimension"/><!--图片尺寸-->
+    <attr name="mch_srlDrawableArrowSize" format="dimension"/><!--箭头图片尺寸-->
+    <attr name="mch_srlDrawableProgressSize" format="dimension"/><!--箭头图片尺寸-->
+    <attr name="mch_srlDrawableMarginRight" format="dimension"/><!--图片和文字的间距-->
+    <attr name="mch_srlTextSizeTitle" format="dimension"/><!--标题字体-->
+    <attr name="mch_srlTextSizeTime" format="dimension"/><!--时间字体-->
+    <attr name="mch_srlFinishDuration" format="integer"/><!--完成时停留时间-->
+    <attr name="mch_srlPrimaryColor" format="color"/><!--主要颜色-->
+    <attr name="mch_srlAccentColor" format="color"/><!--强调颜色-->
+    <attr name="mch_srlDrawableArrow" format="reference"/><!--箭头图片-->
+    <attr name="mch_srlDrawableProgress" format="reference"/><!--转动图片-->
+    <attr name="mch_srlEnableHorizontalDrag" format="boolean"/><!--支持水平拖动-->
+
+    <attr name="mch_srlClassicsSpinnerStyle" format="enum">
+        <enum name="Translate" value="0"/><!--平行移动-->
+        <enum name="Scale" value="1"/><!--拉伸形变-->
+        <enum name="FixedBehind" value="2"/><!--固定在背后-->
+    </attr>
+
+    <attr name="mch_layout_srlSpinnerStyle" format="enum">
+        <enum name="Translate" value="0"/><!--平行移动-->
+        <enum name="Scale" value="1"/><!--拉伸形变-->
+        <enum name="FixedBehind" value="2"/><!--固定在背后-->
+        <enum name="FixedFront" value="3"/><!--固定在前面-->
+        <enum name="MatchLayout" value="4"/><!--填满布局-->
+    </attr>
+
+    <declare-styleable name="mch_SmartRefreshLayout">
+        <attr name="mch_srlPrimaryColor"/>
+        <attr name="mch_srlAccentColor"/>
+        <attr name="mch_srlReboundDuration" format="integer"/>
+        <attr name="mch_srlHeaderHeight" format="dimension"/>
+        <attr name="mch_srlFooterHeight" format="dimension"/>
+        <attr name="mch_srlHeaderInsetStart" format="dimension"/>
+        <attr name="mch_srlFooterInsetStart" format="dimension"/>
+        <attr name="mch_srlDragRate" format="float"/>
+        <attr name="mch_srlHeaderMaxDragRate" format="float"/>
+        <attr name="mch_srlFooterMaxDragRate" format="float"/>
+        <attr name="mch_srlHeaderTriggerRate" format="float"/>
+        <attr name="mch_srlFooterTriggerRate" format="float"/>
+        <attr name="mch_srlEnableRefresh" format="boolean"/>
+        <attr name="mch_srlEnableLoadMore" format="boolean"/>
+        <attr name="mch_srlEnableHeaderTranslationContent" format="boolean"/>
+        <attr name="mch_srlEnableFooterTranslationContent" format="boolean"/>
+        <attr name="mch_srlHeaderTranslationViewId" format="reference"/>
+        <attr name="mch_srlFooterTranslationViewId" format="reference"/>
+        <attr name="mch_srlEnablePreviewInEditMode" format="boolean"/>
+        <attr name="mch_srlEnableAutoLoadMore" format="boolean"/>
+        <attr name="mch_srlEnableOverScrollBounce" format="boolean"/>
+        <attr name="mch_srlEnablePureScrollMode" format="boolean"/>
+        <attr name="mch_srlEnableNestedScrolling" format="boolean"/>
+        <attr name="mch_srlEnableScrollContentWhenLoaded" format="boolean"/>
+        <attr name="mch_srlEnableScrollContentWhenRefreshed" format="boolean"/>
+        <attr name="mch_srlEnableLoadMoreWhenContentNotFull" format="boolean"/>
+        <attr name="mch_srlEnableFooterFollowWhenLoadFinished" format="boolean"/>
+        <attr name="mch_srlEnableClipHeaderWhenFixedBehind" format="boolean"/>
+        <attr name="mch_srlEnableClipFooterWhenFixedBehind" format="boolean"/>
+        <attr name="mch_srlEnableOverScrollDrag" format="boolean"/>
+        <attr name="mch_srlDisableContentWhenRefresh" format="boolean"/>
+        <attr name="mch_srlDisableContentWhenLoading" format="boolean"/>
+        <attr name="mch_srlFixedHeaderViewId" format="reference"/>
+        <attr name="mch_srlFixedFooterViewId" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="mch_SmartRefreshLayout_Layout">
+        <attr name="mch_layout_srlSpinnerStyle"/>
+        <attr name="mch_layout_srlBackgroundColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="BezierRadarHeader">
+        <attr name="mch_srlPrimaryColor"/>
+        <attr name="mch_srlAccentColor"/>
+        <attr name="mch_srlEnableHorizontalDrag"/>
+    </declare-styleable>
+
+    <declare-styleable name="BallPulseFooter">
+        <attr name="mch_srlClassicsSpinnerStyle"/>
+        <attr name="mch_srlAnimatingColor" format="color"/>
+        <attr name="mch_srlNormalColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="mch_ClassicsHeader">
+        <attr name="mch_srlClassicsSpinnerStyle"/>
+        <attr name="mch_srlPrimaryColor"/>
+        <attr name="mch_srlAccentColor"/>
+        <attr name="mch_srlFinishDuration"/>
+        <attr name="mch_srlDrawableArrow"/>
+        <attr name="mch_srlDrawableProgress"/>
+        <attr name="mch_srlDrawableMarginRight"/>
+        <attr name="mch_srlDrawableSize"/>
+        <attr name="mch_srlDrawableArrowSize"/>
+        <attr name="mch_srlDrawableProgressSize"/>
+        <attr name="mch_srlTextSizeTitle"/>
+        <attr name="mch_srlTextSizeTime"/>
+        <attr name="mch_srlTextTimeMarginTop" format="dimension"/>
+        <attr name="mch_srlEnableLastTime" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="ClassicsFooter">
+        <attr name="mch_srlClassicsSpinnerStyle"/>
+        <attr name="mch_srlPrimaryColor"/>
+        <attr name="mch_srlAccentColor"/>
+        <attr name="mch_srlFinishDuration"/>
+        <attr name="mch_srlTextSizeTitle"/>
+        <attr name="mch_srlDrawableArrow"/>
+        <attr name="mch_srlDrawableProgress"/>
+        <attr name="mch_srlDrawableMarginRight"/>
+        <attr name="mch_srlDrawableSize"/>
+        <attr name="mch_srlDrawableArrowSize"/>
+        <attr name="mch_srlDrawableProgressSize"/>
+    </declare-styleable>
+
+    <declare-styleable name="TwoLevelHeader">
+        <attr name="mch_srlMaxRage" format="float"/>
+        <attr name="mch_srlFloorRage" format="float"/>
+        <attr name="mch_srlRefreshRage" format="float"/>
+        <attr name="mch_srlFloorDuration" format="integer"/>
+        <attr name="mch_srlEnableTwoLevel" format="boolean"/>
+        <attr name="mch_srlEnablePullToCloseTwoLevel" format="boolean"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="mch_CircularProgressDrawable">
+        <attr name="mch_cpd_padding" format="reference|dimension"/>
+        <attr name="mch_cpd_initialAngle" format="reference|integer"/>
+        <attr name="mch_cpd_maxSweepAngle" format="reference|integer"/>
+        <attr name="mch_cpd_minSweepAngle" format="reference|integer"/>
+        <attr name="mch_cpd_strokeSize" format="reference|dimension"/>
+        <attr name="mch_cpd_strokeColor" format="reference|color"/>
+        <attr name="mch_cpd_strokeSecondaryColor" format="reference|color"/>
+        <attr name="mch_cpd_strokeColors" format="reference"/>
+        <attr name="mch_cpd_reverse" format="boolean"/>
+        <attr name="mch_cpd_rotateDuration" format="reference|integer"/>
+        <attr name="mch_cpd_transformDuration" format="reference|integer"/>
+        <attr name="mch_cpd_keepDuration" format="reference|integer"/>
+        <attr name="mch_cpd_transformInterpolator" format="reference"/>
+        <attr name="mch_cpd_inAnimDuration" format="reference|integer"/>
+        <attr name="mch_cpd_outAnimDuration" format="reference|integer"/>
+        <attr name="mch_cpd_inStepColors" format="reference"/>
+        <attr name="mch_cpd_inStepPercent" format="float"/>
+        <attr name="mch_pv_progressMode" format="reference|integer"/>
+    </declare-styleable>
+</resources>

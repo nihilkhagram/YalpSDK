@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+        <LinearLayout
+            android:id="@+id/btn_mch_back"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="20dp"
+                android:background="@drawable/mch_common_icon_back"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="3dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/account_balance"
+                android:textSize="15dp"
+                android:textColor="#676767"
+                android:layout_gravity="center_vertical"
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/topup_platform_coins"
+            android:textSize="19dp"
+            android:textColor="#222222"
+            android:layout_centerInParent="true"
+            />
+        <TextView
+            android:id="@+id/btn_mch_czjl"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/topup_records"
+            android:textColor="@color/mch_yanse"
+            android:textSize="15dp"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#DEE3E4"
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_marginLeft="24dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/topup_to_account"
+                android:textColor="#222"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/edt_mch_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="27dp"
+                android:text="12213213"
+                android:textColor="#222"
+                android:textSize="16dp"></TextView>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#DCDCDC" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="24dp"
+           >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/topup_amount"
+                android:layout_gravity="center"
+                android:textColor="#222"
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/edt_mch_ptb_number"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="27dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:ems="10"
+                android:maxLength="7"
+                android:hint="@string/topup_amount_is_integer_greater_than_0"
+                android:inputType="number"
+                android:textColor="#222"
+                android:textColorHint="#C0C0C3"
+                android:textSize="15dp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_mch_add_ptb_clear"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="right"
+                android:visibility="visible"
+                android:layout_marginRight="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/mch_circle_clear" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp"
+           >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:text="@string/you_can_get"
+                android:textColor="#C0C0C3"
+                android:textSize="12dp" />
+
+
+            <TextView
+                android:id="@+id/txt_mch_pay_rmb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20"
+                android:textColor="#C0C0C3"
+                android:textSize="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/platform_coins_exchange_rate_1_1"
+                android:textColor="#C0C0C3"
+                android:textSize="12dp" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="27dp"
+        android:text="@string/payment_method"
+        android:gravity="center_vertical"
+        android:background="#F6F6F6"
+        android:paddingLeft="25dp"
+        android:textColor="#C1C1C4"
+        android:textSize="14dp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp">
+
+                <RelativeLayout
+                    android:id="@+id/layout_mgate"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/mch_pay_15dp_gray"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/btn_mgate_pay"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/icon_cny" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/btn_mgate_pay"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="@string/wechat_cny"
+                            android:textColor="#999999" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/mch_img_choose_mgate"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:visibility="visible"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/mch_pay_icon_choose" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_stripe_card"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/mch_pay_15dp_gray"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/btn_stripe_card_pay"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/usd_icon" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/btn_stripe_card_pay"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="@string/stripe_credit_card"
+                            android:textColor="#999999" />
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/mch_img_choose_stipe_stripe_card"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/mch_pay_icon_choose"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/btn_mch_topup_ylpd"
+        android:layout_width="match_parent"
+        android:layout_height="33dp"
+        android:text="@string/confirm_payment"
+        android:textColor="#ffffff"
+        android:layout_marginTop="17dp"
+        android:background="@drawable/mch_btn_lan_bg"
+        android:gravity="center"
+        android:textSize="15dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp" />
+
+    <TextView
+        android:id="@+id/btn_saoma_pay"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:text="@string/scan_to_pay"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:textColor="#666666"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

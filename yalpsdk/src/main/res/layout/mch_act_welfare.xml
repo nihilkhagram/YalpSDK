@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#ffffff"
+        android:layout_height="45dp">
+        <RelativeLayout
+            android:id="@+id/btn_mch_back"
+            android:layout_width="45dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="20dp"
+                android:background="@drawable/mch_common_icon_back"
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/benefits"
+            android:textSize="19dp"
+            android:textColor="#222222"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#DEE3E4"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="42dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/btn_mc_daka"
+            android:layout_width="132dp"
+            android:layout_height="97dp"
+            android:visibility="gone"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/mch_icon_daka"
+            />
+        <ImageView
+            android:id="@+id/btn_mc_ad"
+            android:layout_width="132dp"
+            android:layout_height="97dp"
+            android:visibility="gone"
+            android:background="@drawable/mch_icon_ad"
+            />
+    </LinearLayout>
+</LinearLayout>

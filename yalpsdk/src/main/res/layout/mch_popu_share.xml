@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="match_parent"
+    android:layout_alignParentBottom="true"
+    android:layout_height="match_parent"
+    android:background="#88000000">
+
+    <LinearLayout
+        android:id="@+id/share_mch_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/mch_btn_bai_yuan1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_mch_game"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/share_this_game"
+            android:textSize="16dp"
+
+            android:textColor="#333333"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="17dp"
+            />
+        <TextView
+            android:id="@+id/tv_mch_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/get_rewards_after_friends_registration"
+            android:visibility="gone"
+            android:textSize="13dp"
+            android:textColor="#9A9A9A"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="3dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="105dp"
+            android:orientation="horizontal"
+            >
+
+            <LinearLayout
+                android:id="@+id/btn_mch_qq"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="49dp"
+                    android:layout_height="49dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/mch_login_icon_qq" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/share_on_twitter"
+                    android:textSize="12dp"
+                    android:textColor="#666666" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btn_mch_kongjian"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="49dp"
+                    android:layout_height="49dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/mch_login_icon_kongjian" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/share_on_facebook"
+                    android:textSize="12dp"
+                    android:textColor="#666666" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btn_mch_weixin"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="49dp"
+                    android:layout_height="49dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/mch_login_icon_wechat" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/share_on_whatsapp"
+                    android:textSize="12dp"
+                    android:textColor="#666666" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btn_mch_pengyouquan"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="49dp"
+                    android:layout_height="49dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/mch_login_icon_pengyouquan" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/share_by_email"
+                    android:textSize="12dp"
+                    android:textColor="#666666"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#D5D4D4"
+            />
+        <TextView
+            android:id="@+id/btn_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="@string/cancel"
+            android:textColor="#676767"
+            android:gravity="center"
+            android:textSize="17dp"
+            />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_mch_null"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/share_mch_layout"
+        />
+</RelativeLayout>

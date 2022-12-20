@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/mch_bg_chongzhi1">
+
+        <ImageView
+            android:id="@+id/img_mch_hread"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="43dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/btn_mch_back"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="20dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/mch_icon_back_pay" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/confirm_order"
+                    android:textColor="@color/mch_bai"
+                    android:textSize="19dp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/listing_price_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/tv_real_price"
+                    android:layout_marginBottom="2dp"
+                    android:layout_toLeftOf="@id/tv_real_price"
+                    android:text="@string/usd_label"
+                    android:textColor="#FF0000"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/tv_real_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="0"
+                    android:textColor="#FF0000"
+                    android:textSize="24dp" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/mch_pay_15dp_gray"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="115dp"
+                        android:layout_height="match_parent"
+                        android:gravity="right|center_vertical"
+                        android:text="@string/item_name_label"
+                        android:textColor="#666666"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_wupin_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/loading_price_usd"
+                        android:textColor="#666666"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/layout_coupon"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="115dp"
+                        android:layout_height="match_parent"
+                        android:gravity="right|center_vertical"
+                        android:text="@string/coupon"
+                        android:textColor="#666666"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_choose_coupon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/zero_coupon_available"
+                        android:textColor="#FF8F19"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" >"
+                        android:textColor="#666666"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_coupon_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="@string/coupon_zero_usd"
+                        android:textColor="#FF8F19"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="115dp"
+                        android:layout_height="match_parent"
+                        android:gravity="right|center_vertical"
+                        android:text="@string/amount_to_pay_label"
+                        android:textColor="#666666"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_mch_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0 USD（0 off）"
+                        android:textColor="#666666"
+                        android:textSize="14sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="115dp"
+                        android:layout_height="match_parent"
+                        android:gravity="right|center_vertical"
+                        android:text="@string/ylp_balance_label"
+                        android:textColor="#666666"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/txt_mch_ptb_balance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0 USD"
+                        android:textColor="#666666"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="115dp"
+                        android:layout_height="match_parent"
+                        android:gravity="right|center_vertical"
+                        android:text="@string/binding_dollar_balance"
+                        android:textColor="#666666"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/txt_mch_bb_balance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=" 0"
+                        android:textColor="#666666"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/choose_payment_method"
+                android:textSize="12sp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#222222" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp">
+
+                <RelativeLayout
+                    android:id="@+id/layout_mgate"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/mch_pay_15dp_gray"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/btn_mgate_pay"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/icon_cny" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/btn_mgate_pay"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="@string/wechat_cny"
+                            android:textColor="#999999" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/mch_img_choose_mgate"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:visibility="visible"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/mch_pay_icon_choose" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_stripe_card"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/mch_pay_15dp_gray"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/btn_stripe_card_pay"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/usd_icon" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/btn_stripe_card_pay"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="@string/stripe_credit_card"
+                            android:textColor="#999999" />
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/mch_img_choose_stipe_stripe_card"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/mch_pay_icon_choose"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:id="@+id/layout_ylpd"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/mch_pay_15dp_gray"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/btn_ylpd_pay"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/mch_icon_platform" />
+
+                        <TextView
+                            android:id="@+id/txt_ptb_pay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/btn_ylpd_pay"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="@string/ylpd"
+                            android:textColor="#999999" />
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:id="@+id/mch_img_choose_ylpd"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/mch_pay_icon_choose" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:id="@+id/layout_binding_dollar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/mch_pay_15dp_gray"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/btn_binding_dollar_pay"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/mch_icon_bindptb" />
+
+                        <TextView
+                            android:id="@+id/txt_binding_dollar_pay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/btn_binding_dollar_pay"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="Game Coins"
+                            android:textColor="#999999" />
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:id="@+id/mch_img_choose_binding_dollar"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/mch_pay_icon_choose" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/mch_verification_code"
+                android:visibility="gone"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/mch_pay_15dp_gray"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/mch_et_bg"
+                        android:gravity="center_vertical"
+                        >
+
+
+                        <EditText
+                            android:id="@+id/edt_mc_email_code"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_weight="6"
+                            android:background="#00000000"
+                            android:enabled="true"
+                            android:gravity="center_vertical"
+                            android:hint="@string/email_verification_code"
+                            android:imeOptions="flagNoExtractUi"
+                            android:inputType="number"
+                            android:maxLength="6"
+                            android:paddingLeft="10dp"
+                            android:singleLine="true"
+                            android:textColor="#FF9D9D9E"
+                            android:textColorHint="#C0C0C3"
+                            android:textSize="12sp" />
+
+                        <Button
+                            android:id="@+id/get_email_code"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:text="@string/get_code"
+                            android:textColor="#19B1EA"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/mch_et_bg"
+                        android:gravity="center_vertical"
+                        >
+
+
+                        <EditText
+                            android:id="@+id/edt_mc_sms_code"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_weight="6"
+                            android:background="#00000000"
+                            android:enabled="true"
+                            android:gravity="center_vertical"
+                            android:hint="@string/sms_verification_code"
+                            android:imeOptions="flagNoExtractUi"
+                            android:inputType="number"
+                            android:maxLength="6"
+                            android:paddingLeft="10dp"
+                            android:singleLine="true"
+                            android:textColor="#FF9D9D9E"
+                            android:textColorHint="#C0C0C3"
+                            android:textSize="12sp" />
+
+                        <Button
+                            android:id="@+id/get_sms_code"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:text="@string/get_code"
+                            android:textColor="#19B1EA"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/mch_et_bg"
+                        android:gravity="center_vertical">
+
+                        <EditText
+                            android:id="@+id/edt_mc_platform_register_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:background="#00000000"
+                            android:enabled="true"
+                            android:gravity="center_vertical"
+                            android:hint="@string/transaction_password"
+                            android:imeOptions="flagNoExtractUi"
+                            android:maxLength="15"
+                            android:paddingLeft="10dp"
+                            android:password="true"
+                            android:singleLine="true"
+                            android:textColor="#FF9D9D9E"
+                            android:textColorHint="#C0C0C3"
+                            android:textSize="12sp" />
+                        <RelativeLayout
+                            android:id="@+id/rl_mch_register_phone_eye"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp">
+
+                            <ImageView
+                                android:id="@+id/iv_mch_register_phone_eye"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/mch_eye_close" />
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/btn_mch_remark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:text="@string/random_discount"
+                android:textColor="#333333"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/btn_mch_pay"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/mch_cricle_5dp_bg_blue"
+                android:text="@string/pay_now"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/btn_scan_pay"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:text="@string/more_payment_methods"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:textColor="#666666"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+       >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/announcement_title"
+                android:textSize="15dp"
+                android:textColor="#333333"
+                />
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/server_online_time"
+                android:layout_marginTop="3dp"
+                android:textSize="12dp"
+                android:textColor="#999999"
+                />
+            <TextView
+                android:id="@+id/tv_qufu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/game_server"
+                android:layout_marginTop="2dp"
+                android:textSize="12dp"
+                android:textColor="#999999"
+                />
+            <TextView
+                android:id="@+id/tv_con"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/announcement_details"
+                android:layout_marginTop="10dp"
+                android:textSize="12dp"
+                android:lineSpacingExtra="4dp"
+                android:textColor="#333333"
+                />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

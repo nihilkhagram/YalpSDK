@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="mch_platform_trans">#90000000</color>
+    <color name="mch_controlgran">#9000</color>
+    <color name="mch_transparent">#0000</color>
+
+    <!--<color name="mch_yanse">#f9ab43</color>-->
+    <color name="mch_yanse">#21b1eb</color>
+    <color name="mch_bai">#ffffff</color>
+    <color name="mch_hei">#666666</color>
+    <color name="mch_hui">#999999</color>
+</resources>

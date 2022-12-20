@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:background="@drawable/mch_qiu_bg"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="54dp">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:visibility="visible"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:id="@+id/layout_logining"
+                android:layout_marginLeft="60dp"
+                android:visibility="visible"
+                android:layout_marginRight="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/tv_logining_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/logging_you_in"
+                    android:textSize="13dp"
+                    android:layout_marginTop="11dp"
+                    android:textColor="#000000"
+                    />
+                <ImageView
+                    android:id="@+id/img_mch_jiazai"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/mch_common_icon_jiazai"
+                    android:layout_below="@id/tv_logining_account"
+                    />
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/logging_in"
+                    android:textSize="10dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_below="@id/tv_logining_account"
+                    android:layout_marginTop="1dp"
+                    android:layout_toRightOf="@id/img_mch_jiazai"
+                    android:textColor="#999999"
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/layout_loginok"
+                android:layout_marginLeft="56dp"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_loginok_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="***********"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textSize="13sp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/mch_yanse"
+                    />
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/welcome_back"
+                    android:singleLine="true"
+                    android:textSize="12sp"
+                    android:layout_toRightOf="@id/tv_loginok_account"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textColor="#545454"
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <com.cointizen.paysdk.view.round.CircleImageView
+            android:id="@+id/mch_img_login_ing"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:visibility="gone"
+            android:scaleType="centerCrop"
+            android:layout_marginLeft="4dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/mch_pic_touxiang" />
+        <ImageView
+            android:id="@+id/mch_img_login_ok"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/mch_icon_chenggong"
+            />
+    </FrameLayout>
+
+    <!--
+         <include
+        android:id="@+id/view_menu"
+        android:background="@android:color/transparent"
+        layout="@layout/mch_flo_menu" />
+    -->
+
+</LinearLayout>

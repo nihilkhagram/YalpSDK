@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+        <RelativeLayout
+            android:id="@+id/btn_mch_back"
+            android:layout_width="40dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="20dp"
+                android:background="@drawable/mch_common_icon_back"
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/membership_level"
+            android:textColor="#222222"
+            android:textSize="19dp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DEE3E4"
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:overScrollMode="never"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="44dp"-->
+<!--        android:background="#F6F5F5"-->
+<!--        android:text="会员等级由消费额决定，满足相应消费额即可升级"-->
+<!--        android:textSize="12dp"-->
+<!--        android:textColor="#9A9999"-->
+<!--        android:gravity="center" />-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:orientation="horizontal"
+                android:background="#F6F4F5"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/current_level"
+                    android:textColor="#666666"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/mch_tv_vip_leve"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="VIP0"
+                    android:textColor="#F9AB43"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="15sp"/>
+
+                <LinearLayout
+                    android:id="@+id/mch_ll_vip_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="3dp"
+                        android:text="@string/to_next_level"
+                        android:gravity="center"
+                        android:textColor="#666666"
+                        android:textSize="13sp"/>
+
+                    <TextView
+                        android:id="@+id/mch_tv_vip_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="¥0"
+                        android:textColor="#21B1EB"
+                        android:gravity="center"
+                        android:textSize="15sp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="）"
+                        android:gravity="center"
+                        android:textColor="#666666"
+                        android:textSize="13sp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="42dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="@string/level"
+            android:gravity="center"
+            android:textSize="13dp"
+            android:textColor="#333333" />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#F2F2F2"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="@string/total_purchase_amount"
+            android:gravity="center_vertical"
+            android:paddingLeft="54dp"
+            android:textSize="13dp"
+            android:textColor="#333333" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F2F2F2" />
+
+    <ListView
+        android:id="@+id/mch_vip_level_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:divider="@null"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="#F6F5F5"
+        android:layout_height="123dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="19dp"
+            android:textColor="#999999"
+            android:textSize="12dp"
+            android:text="@string/total_purchase_amount_desc_1"
+            android:lineSpacingExtra="5dp"
+            android:layout_marginTop="16dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="19dp"
+            android:textColor="#999999"
+            android:textSize="12dp"
+            android:text="@string/total_purchase_amount_desc_2"
+            android:lineSpacingExtra="5dp"
+            android:layout_marginTop="5dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="19dp"
+            android:textColor="#999999"
+            android:textSize="12dp"
+            android:text="@string/total_purchase_amount_desc_3"
+            android:lineSpacingExtra="5dp"
+            android:layout_marginTop="5dp"
+            />
+    </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

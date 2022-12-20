@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/layout_fun"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/img_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/mch_tab_icon_zhuxiao_n"
+                    />
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:text="@string/close_account"
+                    style="@style/mch_MCHtextStyle"
+                    android:layout_marginBottom="10dp"
+                    />
+        </LinearLayout>
+</LinearLayout>

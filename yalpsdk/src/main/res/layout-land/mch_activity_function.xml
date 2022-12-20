@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/layout_yindao"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/img_mc_2"
+            android:layout_width="148dp"
+            android:layout_height="31dp"
+            android:background="@drawable/mch_txt_0"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="160dp"
+            />
+
+        <ImageView
+            android:id="@+id/img_mc_1"
+            android:layout_width="113dp"
+            android:layout_height="55dp"
+            android:layout_below="@id/img_mc_2"
+            android:background="@drawable/mch_btn_next"
+            android:layout_alignLeft="@id/img_mc_2"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="50dp"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/mch_funtion_layout"
+        android:layout_width="140dp"
+        android:background="@drawable/mch_tab_bg_heng_n"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/lay_con"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.cointizen.paysdk.view.round.NiceImageView
+                android:id="@+id/mch_funtion_hread_img"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="23dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/mch_nav_pic_touxiang"
+                />
+            <TextView
+                android:id="@+id/mch_funtion_tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mch_funtion_hread_img"
+                android:layout_centerHorizontal="true"
+                android:text="@string/my_alt_accounts"
+                android:singleLine="true"
+                android:textSize="13dp"
+                android:textColor="#ffffff"
+                android:layout_marginTop="5dp"
+                />
+
+            <GridView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="17dp"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                android:layout_below="@id/mch_funtion_tv_name"
+                />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_mch_function_null"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/mch_funtion_layout" />
+</RelativeLayout>

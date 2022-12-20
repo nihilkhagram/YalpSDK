@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gt3_geetest_analyzing">智能分析中...</string>
+    <string name="gt3_geetest_checking">智能验证检测中</string>
+    <string name="gt3_geetest_click">点击按钮进行验证</string>
+    <string name="gt3_geetest_closed"> 验证码已关闭</string>
+    <string name="gt3_geetest_http_error">网络连接失败</string>
+    <string name="gt3_geetest_http_timeout">网络超时</string>
+    <string name="gt3_geetest_pass">验证通过</string>
+    <string name="gt3_geetest_please_verify">请完成上方验证</string>
+    <string name="gt3_geetest_success">验证成功</string>
+    <string name="gt3_geetest_support">极验提供技术支持</string>
+    <string name="gt3_geetest_try_again"> 请点击重试</string>
+    <string name="gt3_request_data_error">request data error</string>
+    <string name="gt3_request_net_erroe">request net error</string>
+    <style name="gt3Widget.GifView" parent="@android:style/Widget"/>
+    <style name="gt3_dialog_style" parent="android:Theme.Dialog">
+        <!--Dialog的windowFrame框为无-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否半透明-->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--除去title-->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!--显示区域以外是否使用黑色半透明背景-->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!--<item name="android:animationDuration">10000</item>-->
+        <!--设置动画效果-->
+        <!--<item name="android:windowAnimationStyle">@style/gt_dialog_animator_translucent</item>-->
+        <!--设置dialog的背景-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+</resources>

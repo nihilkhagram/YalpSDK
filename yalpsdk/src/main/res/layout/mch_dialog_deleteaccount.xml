@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    android:gravity="center"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="270dp"
+        android:background="@drawable/mch_allowprivacy_dialog_bg"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="15dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/mch_delete_account"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="@string/are_you_sure_to_close_account"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#333333"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingRight="20dp"
+            android:paddingLeft="30dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="20dp">
+
+            <TextView
+                android:id="@+id/tv_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:ellipsize="end"
+                android:lineSpacingExtra="5dp"
+                android:text="@string/all_data_will_be_lost_after_account_deletion"
+                android:textColor="#999999"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingRight="30dp"
+            android:paddingLeft="30dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp">
+
+            <Button
+                android:id="@+id/btn_del_submit"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:text="@string/yes_im_sure"
+                android:textColor="#2089FE"
+                android:textSize="15sp"
+                android:background="@drawable/mch_delaccount_submit"/>
+
+            <Button
+                android:id="@+id/btn_del_cancel"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:text="@string/let_me_think_again"
+                android:textColor="#FEFEFE"
+                android:textSize="15sp"
+                android:background="@drawable/mch_delaccount_calcel"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_del_agreement"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/user_account_deletion_agreement"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="#2089FE"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

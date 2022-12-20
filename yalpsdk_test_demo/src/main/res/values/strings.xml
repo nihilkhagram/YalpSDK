@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Yalp SDK Demo</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="parame_game_name">游戏名称</string>
+    <string name="parame_game_appid">游戏AppID</string>
+    <string name="parame_game_id">游戏ID</string>
+    <string name="parame_props_price">道具价格(分)</string>
+    <string name="parame_sdk_str">SDK接口加密字符串</string>
+    <string name="parame_sdk_ip">SDK接口域名地址</string>
+
+    <string name="parame_button_str">确认保存</string>
+</resources>

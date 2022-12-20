@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:roundiv="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/in_game_purchase_game_name"
+            android:textColor="#222222"
+            android:layout_marginTop="6dp"
+            android:textSize="15dp"
+            android:id="@+id/tv_name" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/purchase_time"
+            android:textColor="#999999"
+            android:layout_marginTop="4dp"
+            android:layout_below="@id/tv_name"
+            android:textSize="10dp"
+            android:id="@+id/tv_time" />
+
+         <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="-10"
+             android:layout_alignParentRight="true"
+             android:layout_marginTop="6dp"
+              android:textSize="15sp"
+              android:textColor="#FF4E00"
+             android:id="@+id/tv_money"
+              />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/platform_coins"
+            android:textColor="#999999"
+            android:layout_marginTop="4dp"
+            android:layout_below="@id/tv_name"
+            android:layout_alignParentRight="true"
+            android:textSize="10dp"
+            android:id="@+id/tv_pay_type" />
+
+
+    </RelativeLayout>
+</LinearLayout>

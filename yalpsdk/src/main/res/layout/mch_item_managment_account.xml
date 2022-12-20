@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:background="@drawable/mch_btn_hui_bg"
+        android:layout_marginTop="10dp"
+        android:id="@+id/btn_play"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <ImageView
+            android:id="@+id/btn_mch_name_edit"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/mch_trumpet_btn_write" />
+
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/tv_mch_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/btn_mch_name_edit"
+            android:gravity="center"
+            android:text="@string/current_login_account"
+            android:textColor="#FCFF08"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_mch_small_account"
+            android:layout_toLeftOf="@id/tv_mch_hint"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/alt_account_1"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</LinearLayout>

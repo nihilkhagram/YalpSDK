@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    android:gravity="center"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="180dp"
+        android:background="@drawable/mch_allowprivacy_dialog_bg"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="30dp"
+            android:paddingRight="20dp"
+            android:paddingLeft="30dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="20dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbarStyle="outsideInset"
+                android:fadeScrollbars="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_msg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:ellipsize="end"
+                        android:lineSpacingExtra="5dp"
+                        android:text=""
+                        android:textColor="#999999"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingRight="30dp"
+            android:paddingLeft="30dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp">
+
+            <Button
+                android:id="@+id/btn_permission"
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:text="@string/got_it"
+                android:textColor="#FEFEFE"
+                android:textSize="15sp"
+                android:background="@drawable/mch_delaccount_calcel"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

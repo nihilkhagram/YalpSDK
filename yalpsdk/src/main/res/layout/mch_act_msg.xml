@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <RelativeLayout
+            android:id="@+id/btn_mch_back"
+            android:layout_width="40dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/mch_common_icon_back" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/message_center"
+            android:textColor="#222222"
+            android:textSize="19dp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DEE3E4" />
+
+    <com.cointizen.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/layout_havedata"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/list_msg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:divider="@null"
+            />
+    </com.cointizen.smartrefresh.layout.SmartRefreshLayout>
+    <TextView
+        android:id="@+id/tv_mch_nodata"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/encourage_interaction"
+        android:textSize="15dp"
+        android:textColor="#979797"
+        android:visibility="gone"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="3dp"
+        android:paddingTop="143dp"
+        />
+
+    <!--<RelativeLayout
+        android:id="@+id/layout_btn"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:layout_height="36dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btn_mch_zw"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="赞我"
+                android:visibility="gone"
+                android:textColor="#666666"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/btn_mch_hf"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="回复"
+                android:visibility="gone"
+                android:textColor="#666666"
+                android:textSize="14dp" />
+
+            <RelativeLayout
+                android:id="@+id/btn_mch_tz"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/tv_mch_tz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="通知"
+                    android:textColor="#666666"
+                    android:textSize="14dp" />
+                <TextView
+                    android:id="@+id/tv_tz_weidu"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/tv_mch_tz"
+                    android:visibility="gone"
+                    android:background="@drawable/mch_icon_weidu"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/btn_mch_qq"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/tv_mch_qq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="好友请求"
+                    android:textColor="#666666"
+                    android:textSize="14dp" />
+                <TextView
+                    android:id="@+id/tv_qq_weidu"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/tv_mch_qq"
+                    android:visibility="gone"
+                    android:background="@drawable/mch_icon_weidu"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_xian"
+            android:layout_width="100dp"
+            android:layout_height="3dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/mch_xian_icon_1" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#DEE3E4" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/balance_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never" />-->
+
+</LinearLayout>

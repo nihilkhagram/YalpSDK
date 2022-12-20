@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+        <RelativeLayout
+            android:id="@+id/btn_mch_back"
+            android:layout_width="40dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="20dp"
+                android:background="@drawable/mch_common_icon_back"
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/gift_packs"
+            android:textColor="#222222"
+            android:textSize="19dp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DEE3E4" />
+
+    <com.cointizen.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/layout_havedata"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/mch_layout_vip_gift"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="13dp"
+                        android:background="@color/mch_yanse"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/vip_gift_packs"
+                        android:textSize="15sp"
+                        android:textColor="@color/mch_hei"/>
+                </LinearLayout>
+                <ListView
+                    android:id="@+id/listview_tequan"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never"
+                    android:scrollbars="none"
+                    android:divider="@null" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/mch_xian"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#F2F2F2" />
+
+        <LinearLayout
+            android:id="@+id/mch_layout_gift"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="13dp"
+                    android:background="@color/mch_yanse"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/normal_gift_packs"
+                    android:textSize="15sp"
+                    android:textColor="@color/mch_hei"/>
+            </LinearLayout>
+            <ListView
+                android:id="@+id/listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                android:divider="@null" />
+        </LinearLayout>
+
+        </LinearLayout>
+        </ScrollView>
+    </com.cointizen.smartrefresh.layout.SmartRefreshLayout>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/layout_wu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/no_gift_packs"
+        android:textColor="#999999"
+        android:textSize="14sp"
+        android:gravity="center" />
+
+</LinearLayout>

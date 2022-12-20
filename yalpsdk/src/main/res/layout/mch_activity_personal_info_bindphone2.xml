@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+            <RelativeLayout
+                android:id="@+id/btn_mch_back"
+                android:layout_width="45dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/mch_btn_back"
+                    android:layout_centerInParent="true"
+                    />
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/verify_identity"
+                android:textSize="18dp"
+                android:textColor="#222222"
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#DEE3E4"
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_mch_bindphone_top"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="25dp"
+                android:visibility="visible"
+                android:background="#ffffff"
+                android:orientation="horizontal"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/step1"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/mch_step1_80x80_blue"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:id="@+id/step1_"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/verify_identity"
+                        android:textColor="@color/mch_yanse" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <View
+                        android:id="@+id/line_bindphone_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#55434343" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/step_verifyidentity"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/mch_step2_80x80_blue"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:id="@+id/step_verifyidentity_"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/security_phone_number"
+                        android:textColor="#a0a0a0" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <View
+                        android:id="@+id/line_bindphone_2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#55434343" />
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/step_securityphone"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/mch_step3_80x80_blue"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:id="@+id/step_securityphone_"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/done_verification"
+                        android:textColor="#a0a0a0" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/bindphone_body_setup1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingBottom="15dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="25dp"
+                android:visibility="gone">
+
+
+                <RelativeLayout
+
+                    android:id="@+id/relativeLayout1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    >
+
+                    <EditText
+                        android:id="@+id/edt_bindphone"
+                        android:layout_width="fill_parent"
+                        android:layout_height="33dp"
+                        android:background="@drawable/mch_et_bg"
+                        android:hint="@string/please_enter_password"
+                        android:inputType="textPassword"
+                        android:maxLength="15"
+                        android:maxLines="1"
+                        android:paddingLeft="8dp"
+                        android:textColor="#222222"
+                        android:textColorHint="#BCBCBD"
+                        android:textSize="13dp">
+
+                        <requestFocus />
+                    </EditText>
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/btn_bindphone1"
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:layout_below="@+id/relativeLayout1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:background="@drawable/mch_btn_lan_bg"
+                    android:text="@string/next"
+                    android:textColor="#fff"
+                    android:textSize="13dp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/bindphone_body_setup2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="25dp"
+                android:orientation="vertical"
+                android:paddingBottom="15dp"
+                android:visibility="gone">
+
+
+                <EditText
+                    android:id="@+id/step2_edt_phone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="33dp"
+                    android:background="@drawable/mch_et_bg"
+                    android:hint="@string/please_enter_phone_number"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:maxLines="1"
+                    android:paddingLeft="8dp"
+                    android:textColor="#2B2B2B"
+                    android:textColorHint="#BCBCBD"
+                    android:textSize="13dp" />
+
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/mch_et_bg"
+                    android:layout_marginTop="16dp">
+
+
+                    <EditText
+                        android:id="@+id/step2_edt_checknum"
+                        android:layout_width="match_parent"
+                        android:layout_height="33dp"
+                        android:background="@null"
+                        android:hint="@string/please_enter_verification_code"
+                        android:inputType="number"
+                        android:maxLength="6"
+                        android:maxLines="1"
+                        android:paddingLeft="8dp"
+                        android:textColor="#2B2B2B"
+                        android:textColorHint="#BCBCBD"
+                        android:textSize="13dp" />
+
+                    <Button
+                        android:id="@+id/step2_btn_checknum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="33dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@null"
+                        android:text="@string/get_verification_code"
+                        android:textColor="@color/mch_yanse"
+                        android:textSize="13dp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/step2_btn_next"
+                        android:layout_width="match_parent"
+                        android:layout_height="33dp"
+                        android:background="@drawable/mch_btn_lan_bg"
+                        android:text="@string/ok"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:textSize="14dp" />
+                    <TextView
+                        android:id="@+id/step2_btn_back"
+                        android:layout_width="match_parent"
+                        android:layout_height="33dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="@string/previous"
+                        android:background="@null"
+                        android:textColor="@color/mch_yanse"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/phone_number_not_in_use"
+                            android:textColor="#949494" />
+
+                        <TextView
+                            android:id="@+id/step2_tv_service"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/contact_customer_service"
+                            android:textColor="#19B1EA" />
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bindphone_body_setsuccess"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="81dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="15dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="77dp"
+                    android:layout_height="61dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/mch_icon_bangding_1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="13dp"
+                    android:text="@string/linked_successfully"
+                    android:textColor="#a0a0a0" />
+
+                <TextView
+                    android:id="@+id/text_back"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="17dp"
+                    android:layout_marginLeft="17dp"
+                    android:layout_height="33dp"
+                    android:layout_marginTop="35dp"
+                    android:background="@drawable/mch_cricle_5dp_bg_blue"
+                    android:gravity="center"
+                    android:text="@string/ok"
+                    android:textColor="#fff"
+                    android:textSize="14dp" />
+            </LinearLayout>
+            <!--绑定手机3 end-->
+            <!--解绑手机1 start-->
+            <LinearLayout
+                android:id="@+id/mch_ll_unbindphone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:orientation="vertical"
+                android:paddingBottom="15dp"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/ll_mch_unbindstep1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="1"
+                            android:text="@string/phone_number_linked_with_account"
+                            android:textColor="#666666"
+                            android:textSize="16dp" />
+                        <TextView
+                            android:id="@+id/txt_bindphone_tip"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_weight="1"
+                            android:text="00000000000"
+                            android:textColor="#222222"
+                            android:textSize="17dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/with_linked_phone_number_you_can_reset_password"
+                        android:textColor="#999999"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="14dp"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btn_unbindstep1_cancel"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/mch_cricle_5dp_bg_blue"
+                            android:text="@string/back"
+                            android:visibility="gone"
+                            android:textColor="#fff"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/btn_unbindstep1_sure"
+                            android:layout_width="0dp"
+                            android:layout_height="33dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_marginTop="30dp"
+                            android:background="@drawable/mch_cricle_5dp_bg_blue"
+                            android:text="@string/unlink_phone_number"
+                            android:textColor="#fff"
+                            android:textSize="15dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_mch_unbindstep2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="11dp"
+                    android:layout_marginLeft="11dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_mch_yuanPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:background="@drawable/mch_et_bg"
+                        android:text="0000******000"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="11dp"
+                        android:textColor="#222222"
+                        />
+                    
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="33dp"
+                        android:background="@drawable/mch_et_bg"
+                        android:layout_marginTop="16dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/btn_get_code"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/get_verification_code"
+                            android:textColor="@color/mch_yanse"
+                            android:textSize="14dp"
+                            android:gravity="center"
+                            android:layout_alignParentRight="true"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp"
+                            />
+
+                        <EditText
+                            android:id="@+id/edt_unbindphone"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_toLeftOf="@id/btn_get_code"
+                            android:background="@null"
+                            android:hint="@string/please_enter_verification_code"
+                            android:inputType="number"
+                            android:maxLength="6"
+                            android:maxLines="1"
+                            android:paddingLeft="11dp"
+                            android:textColor="#222222"
+                            android:textColorHint="#C1C0C6"
+                            android:textSize="14dp" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btn_unbindstep2_previous"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/mch_cricle_5dp_bg_blue"
+                            android:text="@string/previous"
+                            android:visibility="gone"
+                            android:textColor="#fff"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/btn_unbindstep2_unbind"
+                            android:layout_width="0dp"
+                            android:layout_height="33dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/mch_cricle_5dp_bg_blue"
+                            android:text="@string/submit"
+                            android:gravity="center"
+                            android:textColor="#fff"
+                            android:textSize="15dp" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_hint_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/phone_number_not_in_use"
+                            android:textSize="14dp"
+                            android:textColor="#949494" />
+
+                        <TextView
+                            android:id="@+id/teptwo_tv_service"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/contact_customer_service"
+                            android:textSize="14dp"
+                            android:textColor="@color/mch_yanse" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_mch_unbindstep3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="11dp"
+                    android:layout_marginLeft="11dp"
+                    android:visibility="gone">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <EditText
+                                android:id="@+id/edt_newPhone"
+                                android:layout_width="match_parent"
+                                android:layout_height="33dp"
+                                android:background="@drawable/mch_et_bg"
+                                android:hint="@string/please_enter_phone_number"
+                                android:inputType="number"
+                                android:maxLength="11"
+                                android:maxLines="1"
+                                android:paddingLeft="5dp"
+                                android:textColor="#222222"
+                                android:textColorHint="#C1C0C6"
+                                android:textSize="14dp" />
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="33dp"
+                                android:background="@drawable/mch_et_bg"
+                                android:layout_marginTop="16dp"
+                                >
+
+                                <TextView
+                                    android:id="@+id/btn_get_code2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/get_verification_code"
+                                    android:textColor="@color/mch_yanse"
+                                    android:textSize="14dp"
+                                    android:gravity="center"
+                                    android:layout_alignParentRight="true"
+                                    android:paddingLeft="15dp"
+                                    android:paddingRight="15dp"
+                                    />
+
+                                <EditText
+                                    android:id="@+id/edt_unbindphone2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_toLeftOf="@id/btn_get_code2"
+                                    android:background="@null"
+                                    android:hint="@string/please_enter_verification_code"
+                                    android:inputType="number"
+                                    android:maxLength="6"
+                                    android:maxLines="1"
+                                    android:paddingLeft="5dp"
+                                    android:textColor="#222222"
+                                    android:textColorHint="#C1C0C6"
+                                    android:textSize="14dp" />
+                            </RelativeLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/btn_unbindstep2_previous2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="40dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/mch_cricle_5dp_bg_blue"
+                                    android:text="@string/previous"
+                                    android:visibility="gone"
+                                    android:textColor="#fff"
+                                    android:textSize="20sp" />
+
+                                <TextView
+                                    android:id="@+id/btn_unbindstep2_unbind2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="33dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/mch_cricle_5dp_bg_blue"
+                                    android:text="@string/ok"
+                                    android:gravity="center"
+                                    android:textColor="#fff"
+                                    android:textSize="15dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

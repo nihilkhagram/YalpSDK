@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.cointizen.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/layout_havedata"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+    </com.cointizen.smartrefresh.layout.SmartRefreshLayout>
+
+    <TextView
+        android:id="@+id/layout_wu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:paddingTop="140dp"
+        android:text="@string/no_gift_packs"
+        android:textColor="#999999"
+        android:textSize="14dp"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+        <RelativeLayout
+            android:id="@+id/btn_mch_back"
+            android:layout_width="40dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="20dp"
+                android:background="@drawable/mch_common_icon_back"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/gift_pack_details"
+            android:textColor="#222222"
+            android:textSize="19dp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DEE3E4" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/btn_mch_receive_pack"
+                    android:layout_width="63dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:textSize="13dp"
+                    android:textColor="@color/mch_bai"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:text="@string/apply"
+                    android:background="@drawable/mch_btn_lan_yuan1" />
+
+
+                <com.cointizen.paysdk.view.gifimageview.GifImageView
+                    android:id="@+id/img_mch_icon"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:src="#e2e2e2"
+                    android:scaleType="fitXY"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="13dp"/>
+
+                <TextView
+                    android:id="@+id/txt_mch_pack_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_toLeftOf="@id/btn_mch_receive_pack"
+                    android:layout_toRightOf="@id/img_mch_icon"
+                    android:maxLines="1"
+                    android:text="@string/loading"
+                    android:textStyle="bold"
+                    android:textColor="#333333"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_below="@id/txt_mch_pack_name"
+                    android:layout_toRightOf="@id/img_mch_icon"
+                    android:layout_marginLeft="13dp"
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/left"
+                        android:textColor="#949494"
+                        android:textSize="12dp"
+                        />
+                    <TextView
+                        android:id="@+id/tv_shengyu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:layout_marginLeft="2dp"
+                        android:textColor="#333"
+                        android:textSize="12dp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_jihuoma"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginRight="14dp"
+                android:layout_marginBottom="17dp"
+                android:layout_marginLeft="14dp"
+                android:layout_height="27dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:background="@drawable/mch_btn_hui_yuan"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/activation_code"
+                        android:textColor="#999999"
+                        android:textSize="12sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="9dp"
+                        />
+                    <TextView
+                        android:id="@+id/tv_jihuoma"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="xxxxxxx"
+                        android:textColor="#444444"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:layout_marginRight="20dp"
+                        android:textSize="12sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="9dp"
+                        />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/btn_fuzhi"
+                    android:layout_width="55dp"
+                    android:text="@string/copy"
+                    android:textSize="14sp"
+                    android:textColor="#fff"
+                    android:gravity="center"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/mch_btn_lan_yuan"
+                    />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#F2F2F2"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/valid_for"
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="14dp"
+                />
+            <TextView
+                android:id="@+id/tv_mc_youxiaoqi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:singleLine="true"
+                android:layout_marginRight="28dp"
+                android:textColor="#949494"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="14dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gift_pack_content"
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:layout_marginTop="13dp"
+                android:layout_marginLeft="14dp"
+                />
+            <TextView
+                android:id="@+id/tv_mc_con"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:layout_marginRight="28dp"
+                android:textColor="#949494"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="14dp"
+                android:lineSpacingExtra="2dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/how_to_use"
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:layout_marginTop="13dp"
+                android:layout_marginLeft="14dp"
+                />
+            <TextView
+                android:id="@+id/tv_mc_shuoming"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:layout_marginRight="28dp"
+                android:textColor="#949494"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="14dp"
+                android:lineSpacingExtra="2dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/notes"
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:layout_marginTop="13dp"
+                android:layout_marginLeft="14dp"
+                />
+            <TextView
+                android:id="@+id/tv_mc_notice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:layout_marginRight="28dp"
+                android:textColor="#949494"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="14dp"
+                android:lineSpacingExtra="2dp"
+                />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:id="@+id/layout_pack"
+        android:layout_width="match_parent"
+        android:layout_height="66dp">
+
+        <TextView
+            android:id="@+id/btn_mch_receive_pack"
+            android:layout_width="63dp"
+            android:layout_height="28dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:textSize="13dp"
+            android:textColor="@color/mch_bai"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:text="@string/apply"
+            android:background="@drawable/mch_btn_lan_yuan1" />
+
+        <TextView
+            android:id="@+id/txt_mch_pack_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="13dp"
+            android:layout_toLeftOf="@id/btn_mch_receive_pack"
+            android:maxLines="1"
+            android:text="@string/gift_pack_for_rooties"
+            android:textColor="#333333"
+            android:textStyle="bold"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txt_mch_pack_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="13dp"
+            android:layout_toLeftOf="@id/btn_mch_receive_pack"
+            android:layout_below="@id/txt_mch_pack_name"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/gift_pack_desc"
+            android:textColor="#8D8D8D"
+            android:textSize="12sp" />
+
+        <View
+            android:id="@+id/mch_xian"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#F2F2F2"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#DCDCDC" />
+
+        <TextView
+            android:id="@+id/txt_mch_pack_effective"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_alignParentRight="true"
+            android:text="@string/exchanging_end_time"
+            android:layout_marginRight="10dp"
+            android:textSize="11sp" />
+    </RelativeLayout>
+
+
+</LinearLayout>

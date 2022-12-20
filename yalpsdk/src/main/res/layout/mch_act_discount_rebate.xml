@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mch_bai">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <RelativeLayout
+            android:id="@+id/btn_mch_back"
+            android:layout_width="40dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/mch_common_icon_back" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/rebates"
+            android:textColor="#222222"
+            android:textSize="19dp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#DEE3E4" />
+
+
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_margin="20dp"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/mch_layout_fanli"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:orientation="vertical">-->
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal">-->
+<!--                    <ImageView-->
+<!--                        android:layout_width="28dp"-->
+<!--                        android:layout_height="28dp"-->
+<!--                        android:background="@drawable/mch_ico_fanli" />-->
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_marginLeft="5dp"-->
+<!--                        android:gravity="center_vertical"-->
+<!--                        android:text="充值返利"-->
+<!--                        android:textColor="#333333"-->
+<!--                        android:textSize="16sp" />-->
+<!--                </LinearLayout>-->
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    android:layout_marginBottom="8dp"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:text="单日单笔充值返利，不可累积（充值后自动发放绑币）"-->
+<!--                    android:textColor="#999999"-->
+<!--                    android:textSize="13sp" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/mch_tv_fanli_msg"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    android:layout_marginBottom="8dp"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:lineSpacingExtra="8dp"-->
+<!--                    android:text="★单次充值100-99，返还30%\n★单次充值100-99，返还30%\n★单次充值100-99，返还30%"-->
+<!--                    android:textColor="@color/hei"-->
+<!--                    android:textSize="14sp" />-->
+
+<!--                <View-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="0.5dp"-->
+<!--                    android:background="#DEE3E4"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:layout_marginBottom="10dp"/>-->
+<!--            </LinearLayout>-->
+
+
+
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/mch_layout_chongzhi"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:orientation="vertical">-->
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal">-->
+<!--                    <ImageView-->
+<!--                        android:layout_width="28dp"-->
+<!--                        android:layout_height="28dp"-->
+<!--                        android:background="@drawable/mch_ico_cz_zhekou" />-->
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_marginLeft="5dp"-->
+<!--                        android:gravity="center_vertical"-->
+<!--                        android:text="充值折扣"-->
+<!--                        android:textColor="#333333"-->
+<!--                        android:textSize="16sp" />-->
+<!--                </LinearLayout>-->
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    android:layout_marginBottom="8dp"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:text="单笔充值折扣"-->
+<!--                    android:textColor="#999999"-->
+<!--                    android:textSize="13sp" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/mch_tv_chongzhi_msg"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    android:layout_marginBottom="8dp"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:lineSpacingExtra="8dp"-->
+<!--                    android:text="★首次充值5折\n★续充7.5折"-->
+<!--                    android:textColor="@color/hei"-->
+<!--                    android:textSize="14sp" />-->
+
+<!--                <View-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="0.5dp"-->
+<!--                    android:background="#DEE3E4"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:layout_marginBottom="10dp"/>-->
+<!--            </LinearLayout>-->
+
+
+
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/mch_layout_bangbi"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:orientation="vertical"-->
+<!--                android:layout_marginBottom="20dp">-->
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal">-->
+<!--                    <ImageView-->
+<!--                        android:layout_width="28dp"-->
+<!--                        android:layout_height="28dp"-->
+<!--                        android:background="@drawable/mch_ico_cz_zhekou" />-->
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_marginLeft="5dp"-->
+<!--                        android:gravity="center_vertical"-->
+<!--                        android:text="充值折扣"-->
+<!--                        android:textColor="#333333"-->
+<!--                        android:textSize="16sp" />-->
+<!--                </LinearLayout>-->
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    android:layout_marginBottom="8dp"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:text="单日单笔绑币折扣"-->
+<!--                    android:textColor="#999999"-->
+<!--                    android:textSize="13sp" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/mch_tv_bangbi_msg"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    android:layout_marginBottom="20dp"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:lineSpacingExtra="8dp"-->
+<!--                    android:text="★首次充值5折\n★续充7.5折"-->
+<!--                    android:textColor="@color/hei"-->
+<!--                    android:textSize="14sp" />-->
+<!--            </LinearLayout>-->
+
+<!--        </LinearLayout>-->
+<!--    </ScrollView>-->
+
+    <ProgressBar
+        style="@style/mch_custom_style_web_progress"
+        android:id="@+id/pro_web_progress"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:max="100"
+        android:progress="0"
+        android:visibility="gone" />
+
+    <WebView
+        android:id="@+id/mch_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

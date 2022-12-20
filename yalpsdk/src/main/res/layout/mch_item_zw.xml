@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:roundiv="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_height="75dp">
+
+        <com.cointizen.paysdk.view.round.NiceImageView
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:id="@+id/img_icon"
+            android:src="#e2e2e2"
+            android:scaleType="fitXY"
+            android:layout_marginRight="9dp"
+            android:layout_centerVertical="true"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/img_icon"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/username"
+                android:textSize="14dp"
+                android:textColor="#333333"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_marginBottom="3dp"
+                />
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="08-29"
+                android:textSize="13dp"
+                android:textColor="#999999"
+                android:layout_alignParentRight="true"
+                />
+            <TextView
+                android:id="@+id/tv_mc_con"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_name"
+                android:text="@string/someone_liked_your_post"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textColor="#666666"
+                android:textSize="12dp"
+                />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#F2F2F2"
+            android:layout_alignParentBottom="true"
+            />
+    </RelativeLayout>
+</LinearLayout>

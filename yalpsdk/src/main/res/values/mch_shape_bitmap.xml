@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="mch_borderRadius" format="dimension" />
+    <attr name="mch_type">
+        <enum name="mch_circle" value="0" />
+        <enum name="mch_round" value="1" />
+    </attr>
+
+
+    <declare-styleable name="mch_RoundImageViewByXfermode">
+        <attr name="mch_borderRadius" />
+        <attr name="mch_type" />
+    </declare-styleable>
+</resources>

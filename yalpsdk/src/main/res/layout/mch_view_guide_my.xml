@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="256dp"
+        android:layout_height="29dp"
+        android:background="@drawable/mch_txt_7"
+        android:layout_marginTop="43dp"
+        android:layout_marginRight="19dp"
+        android:layout_alignParentRight="true"
+        />
+
+    <ImageView
+        android:id="@+id/img_mch_bian"
+        android:layout_width="300dp"
+        android:layout_height="47dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="214dp"
+        android:background="@drawable/mch_txt_5"
+        android:visibility="gone"
+        />
+    <TextView
+        android:id="@+id/tv_mch_zi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="112dp"
+        android:textColor="#fff"
+        android:textSize="14sp"
+        android:lineSpacingExtra="3dp"
+        android:text="@string/exchange_points_gifts_benefits_posts_messaging"
+        />
+    <ImageView
+        android:id="@+id/img_mc_1"
+        android:layout_width="135dp"
+        android:layout_height="34dp"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="321dp"
+        android:background="@drawable/mch_txt_6"
+        />
+    <ImageView
+        android:layout_width="115dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="46dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/img_mc_1"
+        android:background="@drawable/mch_btn_next"
+        />
+
+    <TextView
+        android:id="@+id/tv_mch_zi_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="75dp"
+        android:layout_marginTop="237dp"
+        android:textColor="#fff"
+        android:textSize="14sp"
+        android:lineSpacingExtra="3dp"
+        android:text="@string/switch_auto_login"
+        />
+</RelativeLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+        <RelativeLayout
+            android:id="@+id/btn_mch_back"
+            android:layout_width="45dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="20dp"
+                android:background="@drawable/mch_common_icon_back"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/use_coupons"
+            android:textSize="19dp"
+            android:textColor="#222222"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <View
+        android:id="@+id/line"
+        android:layout_below="@id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#DEE3E4" />
+
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/mch_tv_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@id/line"
+        android:text="@string/no_coupons"
+        android:textSize="16sp"
+        android:textColor="#8e8e8e"
+        android:layout_marginTop="80dp"/>
+
+
+    <TextView
+        android:id="@+id/btn_mch_pay"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/mch_cricle_5dp_bg_blue"
+        android:text="@string/apply_more_coupons"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:layout_alignParentBottom="true"
+        android:textSize="16sp" />
+
+    <GridView
+        android:id="@+id/mch_gridview"
+        android:layout_below="@id/line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:listSelector="@color/mch_transparent"
+        android:layout_above="@id/btn_mch_pay"/>
+</RelativeLayout>
