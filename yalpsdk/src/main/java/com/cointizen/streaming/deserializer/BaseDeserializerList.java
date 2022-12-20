@@ -5,7 +5,6 @@ package com.cointizen.streaming.deserializer;
  */
 
 
-
 import com.cointizen.streaming.http.ResponseData;
 import com.cointizen.streaming.utils.LogUtil;
 import com.google.gson.Gson;
@@ -16,6 +15,7 @@ import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
+
 import java.lang.reflect.Type;
 import java.util.LinkedList;
 import java.util.Map.Entry;
@@ -24,23 +24,27 @@ import java.util.SortedMap;
 import java.util.TreeMap;
 
 
-public class BaseDeserializerList<T> implements JsonDeserializer {
+public class BaseDeserializerList<T extends ResponseData, U> implements JsonDeserializer {
 
     final Class<T> typeParameterClass;
+    final Class<U> st;
 
-    public BaseDeserializerList(Class<T> typeParameterClass) {
+    public BaseDeserializerList(Class<T> typeParameterClass, Class<U> s) {
         this.typeParameterClass = typeParameterClass;
+        st = s;
     }
 
     @Override
-    public ResponseData deserialize(final JsonElement json, final Type typeOfT, final JsonDeserializationContext context)
+    public T deserialize(final JsonElement json, final Type typeOfT, final JsonDeserializationContext context)
             throws JsonParseException {
         final JsonObject jsonObject = json.getAsJsonObject();
 
         final int status = jsonObject.get("code").getAsInt();
+
+
         String message = "";
-        if (jsonObject.has("msg")) {
-            message = jsonObject.get("msg").getAsString();
+        if (jsonObject.has("message")) {
+            message = jsonObject.get("message").getAsString();
         } else if (jsonObject.has("error")) {
             message = jsonObject.get("error").getAsString();
         }
@@ -50,38 +54,57 @@ public class BaseDeserializerList<T> implements JsonDeserializer {
         GsonBuilder gsonBuilder = new GsonBuilder();
         Gson gson = gsonBuilder.create();
 
-        ResponseData responseData = new ResponseData();
+        U dataObj = null;
+        try {
+            dataObj = st.newInstance();
+        } catch (InstantiationException | IllegalAccessException e) {
+            e.printStackTrace();
+        }
 
+        T tObj = null;
+        try {
+            tObj = typeParameterClass.newInstance();
+        } catch (InstantiationException | IllegalAccessException e) {
+            e.printStackTrace();
+        }
+
+        SortedMap<Integer, U> mapValues = new TreeMap<Integer, U>();
         if (jsonObject.has("data") && !jsonObject.get("data").isJsonNull()) {
-            T dataObj = null;
-            SortedMap<Integer, T> mapValues = new TreeMap<>();
+
             if (jsonObject.get("data").isJsonArray()) {
+
                 JsonArray arrayJson = jsonObject.get("data").getAsJsonArray();
+
                 for (int j = 0; j < arrayJson.size(); j++) {
+
                     JsonElement itemData = arrayJson.get(j);
-                    dataObj = gson.fromJson(itemData.getAsJsonObject(), typeParameterClass);
+                    dataObj = gson.fromJson(itemData.getAsJsonObject(), st);
                     mapValues.put(j, dataObj);
                 }
             } else {
+
                 Set<Entry<String, JsonElement>> entries = jsonObject.getAsJsonObject("data").entrySet();
+
                 for (Entry<String, JsonElement> iter : entries) {
+
                     String key = iter.getKey();
                     JsonElement itemData = iter.getValue();
-                    dataObj = gson.fromJson(itemData.getAsJsonObject(), typeParameterClass);
+
+                    dataObj = gson.fromJson(itemData.getAsJsonObject(), st);
                     mapValues.put(Integer.parseInt(key), dataObj);
                 }
             }
-
-            responseData.setCode(status);
-            responseData.setMessage(message);
-            responseData.setData(new LinkedList<T>(mapValues.values()));
+            tObj.setCode(status);
+            tObj.setMessage(message);
+            tObj.setData(new LinkedList<U>(mapValues.values()));
 
         } else {
-            responseData.setCode(status);
-            responseData.setMessage(message);
+            mapValues.put(1, dataObj);
+            tObj.setCode(status);
+            tObj.setMessage(message);
+            tObj.setData(new LinkedList<U>(mapValues.values()));
         }
-        return responseData;
+        return tObj;
     }
-
 }
 

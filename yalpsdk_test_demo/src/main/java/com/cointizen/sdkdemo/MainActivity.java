@@ -38,8 +38,6 @@ import com.cointizen.paysdk.bean.SdkDomain;
 import com.cointizen.paysdk.channel.sign2.WalleChannelReader;
 import com.cointizen.paysdk.config.MCHConstant;
 import com.cointizen.streaming.PostStringRequest;
-import com.cointizen.streaming.bean.StreamingChannel;
-import com.cointizen.streaming.deserializer.BaseDeserializer;
 import com.cointizen.streaming.http.ResponseData;
 import com.cointizen.util.StoreSettingsUtil;
 

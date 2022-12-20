@@ -15,12 +15,11 @@ import java.util.List;
 import java.util.Map;
 
 import com.cointizen.paysdk.R;
+import com.cointizen.streaming.actions.GetListFromServer;
+import com.cointizen.streaming.actions.GetSingleItem;
 import com.cointizen.streaming.adpaters.ChannelsActivityAdapter;
 import com.cointizen.streaming.bean.ChannelData;
 import com.cointizen.streaming.bean.StreamingChannel;
-
-import com.cointizen.streaming.actions.GetListFromServer;
-import com.cointizen.streaming.actions.GetSingleItem;
 
 public class ChannelsListActivity extends AppCompatActivity implements ChannelsActivityAdapter.OnChannelClick{
 
@@ -44,7 +43,7 @@ public class ChannelsListActivity extends AppCompatActivity implements ChannelsA
         Map<String, String> param = new HashMap<>();
         param.put("action", "read");
 
-        GetListFromServer getListFromServer = new GetListFromServer<>(getApplicationContext(), new GetListFromServer.ListCommunicatorInterface<StreamingChannel>() {
+        GetListFromServer getListFromServer = new GetListFromServer(getApplicationContext(), new GetListFromServer.ListCommunicatorInterface<StreamingChannel>() {
             @Override
             public void onError(VolleyError error) {
                 Log.e("MyLogData", "onError-->  " + error);

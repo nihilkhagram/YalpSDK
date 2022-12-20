@@ -39,8 +39,8 @@ import com.cointizen.open.YalpGamesSdk;
 import com.cointizen.paysdk.R;
 import com.cointizen.paysdk.utils.AssetsUtils;
 import com.cointizen.paysdk.utils.SharedPreferencesUtils;
-import com.cointizen.streaming.bean.CreateChannelResponse;
 import com.cointizen.streaming.actions.GetSingleItem;
+import com.cointizen.streaming.bean.CreateChannelResponse;
 import com.cointizen.streaming.http.ResponseData;
 
 import java.util.ArrayList;

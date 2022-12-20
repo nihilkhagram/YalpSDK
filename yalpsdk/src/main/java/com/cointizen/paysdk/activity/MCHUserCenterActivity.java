@@ -47,7 +47,12 @@ import com.cointizen.paysdk.R;
 import com.cointizen.paysdk.adapter.ChannelsActivityAdapter;
 import com.cointizen.paysdk.bean.UserLoginSession;
 import com.cointizen.paysdk.entity.ChannelAndGameInfo;
+import com.cointizen.streaming.ActivityWatchStream;
 import com.cointizen.streaming.ChannelsListActivity;
+import com.cointizen.streaming.ServerHelper;
+import com.cointizen.streaming.actions.GetListFromServer;
+import com.cointizen.streaming.actions.GetSingleItem;
+import com.cointizen.streaming.bean.ChannelData;
 import com.cointizen.util.StoreSettingsUtil;
 import com.lidroid.xutils.BitmapUtils;
 import com.mc.hubert.guide.NewbieGuide;
@@ -96,8 +101,10 @@ import org.json.JSONObject;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
 /**
  * 描述：用户中心
@@ -1150,7 +1157,7 @@ public class MCHUserCenterActivity extends MCHBaseActivity implements MyScrollVi
         }
     };
 
-    private void getData() {
+/*    private void getData() {
         list.clear();
         RequestQueue queue = Volley.newRequestQueue(MCHUserCenterActivity.this);
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, "https://streaming.cointizen.com/user_api/api.php?action=read",
@@ -1214,8 +1221,64 @@ public class MCHUserCenterActivity extends MCHBaseActivity implements MyScrollVi
             }
         });
         queue.add(jsonObjectRequest);
+    }*/
+
+
+    public void getData(){
+        Map<String, String> param = new HashMap<>();
+        param.put("action", "read");
+
+        GetListFromServer getListFromServer = new GetListFromServer(getApplicationContext(), new GetListFromServer.ListCommunicatorInterface<Channels>() {
+            @Override
+            public void onError(VolleyError error) {
+                Log.e("MyLogData", "onError-->  " + error);
+            }
+
+            @Override
+            public void onSuccess(List<Channels> updatedList) {
+                GridLayoutManager layoutManager=new GridLayoutManager(MCHUserCenterActivity.this,2);
+                recyclerView.setLayoutManager(layoutManager);
+                channelsActivityAdapter = new ChannelsActivityAdapter(MCHUserCenterActivity.this, updatedList, MCHUserCenterActivity.this);
+                recyclerView.setAdapter(channelsActivityAdapter);
+            }
+
+            @Override
+            public void onFailed(String message) {
+                Log.e("MyLogData", "onFailed-->  " + message);
+            }
+        });
+        getListFromServer.getListFromServer(ServerHelper.GET_CHANNELS, Channels.class, param, "tag");
     }
 
+    public void getChannelData(String userId, String deletChannelId){
 
+        Map<String, String> param = new HashMap<>();
+        param.put("data_id", userId);
+        Log.e("MyLogData", ""+userId);
+
+        GetSingleItem<ChannelData> getSingleItem = new GetSingleItem<ChannelData>(getApplicationContext(), new GetSingleItem.ListCommunicatorInterface<ChannelData>() {
+            @Override
+            public void onError(VolleyError error) {
+                Log.e("MyLogData", "onError ==>  "+error);
+            }
+
+            @Override
+            public void onSuccess(ChannelData updatedList) {
+                Log.e("MyLogData", "onSuccess ==>  "+ updatedList);
+                Intent intent = new Intent(MCHUserCenterActivity.this, ActivityWatchStream.class);
+                intent.putExtra("channelName", updatedList.getChannel_name());
+                intent.putExtra("subscriberToken", updatedList.getTokenuid_subscriber());
+                intent.putExtra("userId", updatedList.getUid_s());
+                intent.putExtra("deletChannelId", deletChannelId);
+                startActivity(intent);
+            }
+
+            @Override
+            public void onFailed(String message) {
+                Log.e("MyLogData", "onFailed ==>  "+message);
+            }
+        });
+        getSingleItem.getItemFromServer(ServerHelper.CREATE_CHANNEL, ChannelData.class,  param, "tag");
+    }
 
 }

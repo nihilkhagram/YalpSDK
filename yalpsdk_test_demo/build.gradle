@@ -24,7 +24,7 @@ android {
         controlconfig {
             keyAlias 'yalp'
             keyPassword 'yalp123'
-            storeFile file('/Users/jwang/prod.yalp.games/yalp-sdk/yalp_new.jks')
+            storeFile file('D:\\Git_yalp\\yalpsdk\\yalp_new.jks')
             storePassword 'yalp123'
             v1SigningEnabled false
             v2SigningEnabled true
