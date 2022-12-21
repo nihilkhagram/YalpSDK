@@ -1,11 +1,13 @@
 package com.cointizen.streaming;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.SurfaceView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -48,7 +50,8 @@ public class ActivityWatchStream extends AppCompatActivity {
     private SurfaceView remoteSurfaceView;
     Button watchStream;
     String channelName, subscriberToken, deletChannelId;
-
+    ImageView iv_close;
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,6 +59,7 @@ public class ActivityWatchStream extends AppCompatActivity {
         getSupportActionBar().hide();
 
         watchStream = findViewById(R.id.JoinStream);
+        iv_close = findViewById(R.id.iv_close);
 
         channelName = getIntent().getStringExtra("channelName");
         deletChannelId = getIntent().getStringExtra("deletChannelId");
@@ -72,6 +76,14 @@ public class ActivityWatchStream extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 joinChannel();
+            }
+        });
+
+        iv_close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                leaveChannel();
+                finish();
             }
         });
 
