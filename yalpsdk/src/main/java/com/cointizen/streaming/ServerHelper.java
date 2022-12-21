@@ -2,11 +2,11 @@ package com.cointizen.streaming;
 
 public class ServerHelper {
 
-    //public static String BASE_URL = "https://streaming.cointizen.com/";
-    public static String BASE_URL = "http://3.145.7.217/";
+    public static String BASE_URL = "https://streaming.cointizen.com/";
+    //public static String BASE_URL = "http://3.145.7.217/";
 
-    //public static String BASE = "sdk/streaming/";
-    public static String BASE = "user_api/";
+    public static String BASE = "sdk/streaming/";
+    //public static String BASE = "user_api/";
 
     public static String URL = BASE_URL + BASE;
 
